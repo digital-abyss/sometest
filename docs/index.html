@@ -1,0 +1,16 @@
+---
+title: SOme Artifacts
+layout: default
+---
+
+<h1> {{ page.title }} </h1>
+
+<h2> Presentations </h2>
+
+  <div class="posts">
+    {% for deck in site.pages %}
+      {% if deck.category == 'presentation' %}
+        <h3><a href="{{ site.baseurl }}{{ deck.url }}">{{ deck.title }}</a></h3>
+      {% endif %}
+    {% endfor %}
+  </div>
